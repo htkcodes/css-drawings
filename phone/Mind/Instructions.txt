@@ -1,0 +1,58 @@
+
+THIS THEME WAS CREATED BY XANDER.CL / IPB 4x
+
+INSTALLING THE THEME:
+Go to AdminCP —> Customization —> Add Theme —> Upload Theme
+Select the file Mind.xml and you are ready to go.
+
+EDITING THE FOOTER
+1- Go to AdminCP —> Customization —> Clic the edit tool </>
+2- Open globalTemplate and find: <!-- Footer -->
+
+EDITING SUPPORT TEAM BLOCK
+Find: <!-- Team list - Just change the number with the profile number you want to use --> 
+
+There you can change each member photo, example: 
+
+<!-- member 1 -->
+{template="userPhoto" group="global" app="core" params="\IPS\Member::load( 3 )"}
+<!-- end member 1 -->
+
+Replace with member 100
+<!-- member 1 -->
+{template="userPhoto" group="global" app="core" params="\IPS\Member::load( 100 )"}
+<!-- end member 1 -->
+
+How to know what’s my member number?
+My profile url on IPB: https://invisionpower.com/profile/172753-xndrmc/
+So, my number is: 172753. (This obviously apply it to your website)
+
+=========================================================================
+
+EDITING SOCIAL NETWORK BLOCK
+Find: <!-- Social -->
+There you can add your social url to each item.
+
+=========================================================================
+
+EDITING ABOUT US BLOCK
+Find: <!-- Us -->
+Modifies the text as you wish.
+
+=========================================================================
+
+REMOVE XANDER COPYRIGHT
+There is two ways to do it, choose any:
+
+1- Open Footer template and find: 
+{{if !in_array('ipsLayout_minimal', \IPS\Output::i()->bodyClasses )}}  
+<a title='xander.cl' target="_blank" class='xander_copyright' href="http://xander.cl/">Theme by xander</a>
+{{endif}}
+
+2- Open custom.css and find: .xander_copyright
+   Change: display: inline-block; 
+          to 
+           display: none;
+
+
+Hope you like :)

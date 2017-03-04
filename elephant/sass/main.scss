@@ -1,0 +1,90 @@
+$pale:#8BEAF4;
+$w:#fff;
+$c-r:#EFC3E6;
+
+@mixin center() {
+      margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+body{
+    background: $pale;
+
+}
+.box{
+  @include center;
+    width: 500px;
+    background: $w;
+    height: 500px;
+}
+
+.f-tri{
+    @include center;
+    background:$c-r;
+width: 2.4em;
+height: 4.2em;
+-webkit-clip-path: polygon(70% 0, 68% 83%, 21% 91%, 3% 60%);
+clip-path: polygon(70% 0, 68% 83%, 21% 91%, 3% 60%);
+transform:rotate(-1.5deg);
+}
+.f-tri-copy{
+    @extend .f-tri;
+    background:black;
+    -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1) rotate(0deg);
+     left: 2.2em;
+}
+.s-tri{
+    @include center;
+    background: $c-r;
+   width: 20px;
+   height: 20px; 
+bottom: 0.5em;
+right:2.6em;
+    -webkit-clip-path: polygon(38% 25%, 100% 40%, 41% 94%, 51% 52%);
+clip-path: polygon(38% 25%, 100% 40%, 41% 94%, 51% 52%);
+transform:rotate(-15deg);
+}
+.s-tri-copy{
+    @extend  .s-tri;
+    background:black;
+     -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1) rotate(-15deg);
+        left: 7.4em;
+     }
+     .f-rec{
+        @include center;
+        width: 15px;
+        height: 24px;
+        background:$c-r;
+        right: 1.4em;
+        bottom: 2.9em;
+   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+transform:skewX(-30deg);
+     }
+     .f-rec-copy{
+        @extend .f-rec ;
+        background:black;
+     left: 5em;
+     transform: rotateY(360deg) skewX(30deg);
+     }
+     .s-rec{
+        @include center;
+        background:$c-r;
+        width: 15px;
+        height: 25px;
+        bottom: 3.8em;
+        right: 3.4em;
+
+        transform: rotate(30deg);
+      -webkit-clip-path: polygon(47% 13%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(47% 13%, 100% 0, 100% 100%, 0% 100%);
+     }

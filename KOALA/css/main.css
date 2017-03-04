@@ -1,0 +1,159 @@
+/* line 1, ../sass/main.scss */
+body {
+  background: #25A9FC;
+}
+
+/* line 4, ../sass/main.scss */
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  width: 600px;
+  height: 420px;
+  background: none;
+}
+
+/* line 13, ../sass/main.scss */
+.head {
+  position: absolute;
+  top: 16.5%;
+  left: 25%;
+  width: 50%;
+  height: 67%;
+  background: #A6BECF;
+  border-radius: 50%;
+}
+
+/* line 22, ../sass/main.scss */
+.head-copy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #A6BECF;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* line 30, ../sass/main.scss */
+.ear-left {
+  position: absolute;
+  width: 60%;
+  height: 65%;
+  left: -20%;
+  top: 5%;
+  background: #A6BECF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* line 40, ../sass/main.scss */
+.ear-right {
+  position: absolute;
+  width: 60%;
+  height: 65%;
+  right: -20%;
+  top: 5%;
+  background: #A6BECF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* line 50, ../sass/main.scss */
+.inner-ear {
+  position: absolute;
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+  background: #819CAF;
+}
+
+/* line 59, ../sass/main.scss */
+.eye-left {
+  position: absolute;
+  background: white;
+  width: 30%;
+  height: 33%;
+  top: 25%;
+  left: 21%;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+@keyframes eye-move {
+  /* line 70, ../sass/main.scss */
+  from {
+    left: 30%;
+  }
+
+  /* line 73, ../sass/main.scss */
+  50% {
+    left: 50%;
+  }
+
+  /* line 76, ../sass/main.scss */
+  to {
+    left: 30%;
+  }
+}
+
+/* line 80, ../sass/main.scss */
+.eye-right {
+  position: absolute;
+  background: white;
+  width: 30%;
+  height: 33%;
+  top: 25%;
+  right: 21%;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+/* line 90, ../sass/main.scss */
+.pupil {
+  position: absolute;
+  width: 28%;
+  height: 30%;
+  top: 35%;
+  left: 30%;
+  border-radius: 50%;
+  background: #27354A;
+}
+
+/* line 100, ../sass/main.scss */
+.nose {
+  position: absolute;
+  background: #BE845F;
+  width: 25%;
+  height: 42.5%;
+  left: 37%;
+  top: 45%;
+  border-radius: 50px;
+  z-index: 4;
+}
+
+/* line 110, ../sass/main.scss */
+.hair-left {
+  position: absolute;
+  top: -8%;
+  left: 30%;
+  width: 20%;
+  height: 20%;
+  background: #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* line 120, ../sass/main.scss */
+.hair-right {
+  position: absolute;
+  top: -4%;
+  left: 48%;
+  width: 20%;
+  height: 20%;
+  background: #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

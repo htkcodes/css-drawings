@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300|Ubuntu:500');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+//Vars
+$primary:#5ed1c9;
+$but-c:#4F545A;
+$sec:#292F36;
+$b:#000;
+$sec-d:#0C0D0F;
+$rich-b:#040505;
+$bdr-c:#8a8d91;
+$bdr-lc:#35a7ff;
+$cloud:#ecf0f1;
+$lg:#c4c6c8;
+$gunm:rgba(60,65,72,1);
+$bdr-op:rgba(60,65,72,0.9);
+$bdr-op-l:rgba(60,65,72,0.5);
+$w-l:rgba(255,255,255,0.6);
+$wl-width:80%;
+$c-height:60%;
+$s-width:35%;
+$s-height:15%;
+$if-height:38%;
+$if-width:38%;
+$width:35%;
+$height:80%;
+$p-width:66%;
+$p-height:5.5%;
+$ll-width:38%;
+$ll-height:38%;
+$w:#fff;
+$i-width:95%;
+$i-height:77.5%;
+$af-width:50%;
+$pl-width:70%;
+$pb-width:29%;
+$w-width:30%;
+$d-width:102%;
+$roboto: 'Roboto', sans-serif;
+$ubuntu: 'Ubuntu',sans-serif;
+//Mixins
+@mixin transi($element,$time,$t-function)
+{
+    -webkit-transition: -webkit-$element $time $t-function;
+transition: -webkit-$element $time $t-function;
+transition: $element $time $t-function;
+transition: $element $time $t-function, $element $time $t-function;
+}
+@mixin trans($pixel){
+  -webkit-transform: translateX($pixel);
+          transform: translateX($pixel);
+}
+@mixin transR($deg){
+-webkit-transform:rotate($deg);
+        transform:rotate($deg);
+}
+
+//Start
+*{
+    text-rendering: optimizeLegibility;
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+    font-family: $roboto;
+}
+body{
+    background: $primary;
+}
+
+   .open{
+       
+@include trans(-38px);
+                    }
+.thropen{
+     @include trans(38px);
+}
+.box{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  width: 600px;
+  height: 540px;
+  background:none;
+    .p-body{
+    position: absolute;
+  top:(100-$height)/2;
+  left:(100-$width)/2;
+  width: $width;
+  height: $height;
+  background:$sec;
+  border-radius: 40px;
+    border-width: 15px;
+        margin: 0;
+        z-index: 1;
+    
+        .phone-top{
+            margin:0 auto;
+            position: absolute;
+            left:(100-$p-width)/2;
+            top: 2%;
+            width: $p-width;
+            height: $p-height;
+            background: none;
+            .camera{
+                background:$b;
+                position: absolute;
+                border-color: $b;
+                top: (100-$c-height)/2;
+                width: 10%;
+                height:$c-height;
+                border-radius: 50%;
+                .lens{
+                     position: absolute;
+                    background:$w;
+                    top:(100-$ll-height)/2;
+                    left: (100-$ll-width)/2;
+                    width:$ll-width;
+                    height:$ll-height;
+                    border-radius: 50%;
+                }
+            }
+             .speaker{
+                 position: absolute;
+                    background:$b;
+                 top: (100-$s-height)/2;
+                  left: (100-$s-width)/2;
+                    width:$s-width;
+                    height:$s-height;
+                 border-radius: 20px;
+                }
+            .flash{
+                   position: absolute;
+                top: (100-$c-height)/2;
+                left: 90%;
+                width: 10%;
+                height:$c-height;
+                background: $w-l;
+                border-radius: 50%;
+                .inner-flash{
+                    position: absolute;
+                  background: $w;
+                     left: (100-$if-width)/2;
+                     top: (100-$if-height)/2;
+                    border-radius: 50%;
+                    width: $if-width;
+                    height: $if-height;
+                }
+            }
+        }
+        .inner-body{
+            position: absolute;
+             top:10%;
+  left:(100-$i-width)/2;
+  width: $i-width;
+  height: $i-height;
+            margin: 0;
+            padding: 0;
+            background:$b;
+              video{
+                  margin: 0;
+                  padding: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            object-fit: fill;
+        }
+            .intro-widget
+            {
+                background:url('bg.jpg') no-repeat;
+            background-size: cover;
+                position: absolute;
+                z-index: 4;
+                width: 100%;
+                height: 100%;
+                &:before{
+                content: '';
+  position: absolute;
+  width: 45%;
+  height: 27%;
+  background: transparent;
+  top: 16%;
+  left: 27%;
+  z-index: 4;
+  border-radius: 50%;
+  border: 1.5px solid $bdr-c;
+  border-left-color:$bdr-lc;
+@include transR(-30deg);
+                }
+                &:after{
+                    content:'';
+                    position: absolute;
+                    width:$af-width;
+                    height: 30%;
+                    background: $b;
+                    left: (100-$af-width)/2;
+                    top: 15%;
+                    border-radius: 50%;
+                    background:$gunm;
+                    
+                }
+                .plus-change{
+                    &:before{
+                         content: '\f068' !important;
+                    }
+                
+                }
+                .plus{
+                    position: absolute;
+                    width:$pl-width;
+                    background:none;
+                    height: 7%;
+                    top: 37%;
+                    left: (100-$pl-width)/2;
+                    z-index: 5;
+                    overflow: hidden;
+                    &:before{
+                         cursor: pointer;
+                        font:normal normal normal 6px/1 FontAwesome;
+                        text-align: center;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        color:$lg;
+                    content: '\f067';
+                    position: absolute;
+                        width:$pb-width;
+                        height: 100%;
+                        z-index: 8;
+                        top: 50%;
+                        left:(100-$pb-width)/2;
+                      background:rgba(60,65,72,0.9);
+                      border-radius: 50% / 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+                    }
+                }
+            
+                .weather{
+                    position: absolute;
+                    width: $w-width;
+                    height: 10%;
+                    top: 17%;
+                    left: (100-$w-width)/2;
+                    background: none;
+                    z-index: 5;
+                    color: $bdr-c;
+             
+                    .icon{
+                        margin-top: 3px;
+                        text-align: center;
+                        font-size: 15px;
+                    }
+                    .city{
+                    
+                       text-align:left;
+                        margin-top: 2px;
+                        font-size: 7px;
+                    
+                    }
+                      .temp{
+                          
+                            position: absolute;
+                            top:63.5%;
+                            left: 70%;
+                            width: 50%;
+                            height: 23%;
+                            font-size: 9px;
+                            text-rendering: optimizeLegibility !important;
+                        }
+                }
+                .time{
+                    position: absolute;
+                    top: 25%;
+                    left: 36%;
+                margin-top: 5px;
+                    width: 50%;
+                    height: auto;
+                    z-index: 6;
+                    color:$w;
+                    font-size: 25px;
+                }
+                .date{
+                   
+                       position: absolute;
+                    top: 35%;
+                    left:(100-($d-width+-80%))/2;
+                margin-top: 5px;
+                    width: $d-width;
+                    height: auto;
+                    z-index: 6;
+                     color: $bdr-c;
+
+                    font-size: 10px;
+                }
+                .sec-circle{
+                    visibility: visible;
+             position: absolute;
+  width: 30%;
+  top: 21%;
+  left:30%;
+                    /*LEFT WAS 11%*/
+  height: 20%;
+  border-radius: 50%;
+    background:$bdr-op-l;
+  border: 1.5px solid $bdr-op;
+-webkit-clip-path: circle(80% at 2% 50%);
+clip-path: circle(80% at 2% 50%);
+            @include transi(transform,0.5s,cubic-bezier(0.19, 1, 0.22, 1));
+                
+                   
+                    .material-icons{
+                        color: $w;
+                        position: absolute;
+                        font-size: 12px;
+                        top:75%;
+                        left: 35%;
+                    }
+                    .low,.high{
+                        font-size: 9px;
+                        color: white;
+                        -webkit-font-smoothing:antialiased;
+                        &:before{
+                             font:normal normal normal 9px/1 FontAwesome;
+                              position: absolute;
+                        }
+                    }
+                    .low{
+                        width: $wl-width;
+                        left: (100-$wl-width)/2;
+                        position: absolute;
+                        top: 50%;
+                        &:before{
+                              content: '\f0d7';
+                            top: 30%;
+                            left: 31%;
+                        }
+                    }
+                    .high{
+                        &:before{
+                            content: '\f0d8';
+                            top: 17%;
+                            left: 31%;
+                        }
+                        width: $wl-width;
+                        left: (100-$wl-width)/2;
+                        position: absolute;
+                        top: 25%;
+                    }
+                }
+                .third-circle{
+                    &:before{
+                        content: 'moto';
+                        position: absolute;
+                        top: 38%;
+                        color: $w;
+                        left: 60%;
+                        font-size: 10px;
+                    }
+                 position: absolute;
+    top: 21%;
+    right: 30%;/*right was 11%*/
+    width: 30%;
+    height: 20%;
+       background:$bdr-op-l;
+    border: 1.5px solid $bdr-op;
+-webkit-clip-path: circle(80.0% at 100% 50%);
+clip-path: circle(80.0% at 98% 50%);
+    border-radius: 50%;
+                     transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+                }
+            }
+        }
+        .brand{
+            $b-width:50%;
+            position: absolute;
+            width:$b-width;
+            height: 50%;
+            font-family:$ubuntu;
+            top: 88%;
+            left: 42%;
+            color:$w-l;
+        }
+        .button{
+            position: absolute;
+            width: 12.5%;
+            height: 5.5%;
+            top: 93%;
+            left: 45%;
+            background:$rich-b;
+            border-radius: 2.4px;
+        }
+        @for $x from 1 through 2{
+            .dot-#{$x}{
+                  position: absolute;
+            top: 98%;
+            background:$b;
+            height: 1%;
+            width: 2%;
+            border-radius: 50%;
+                @if $x == 1{
+                    left:23%
+                }
+                @else
+                {
+                    right: 23%;
+                }
+            }
+            
+           
+        }
+    
+    }
+    .p-body-copy{
+        position: absolute;
+    $width:35.5%;//meh
+    $height:80%;
+  top:(100-$height)/2;
+  left:(100-$width)/2;
+  width: $width;
+  height: $height;
+  background:$sec-d;
+  border-radius: 40px;
+        margin: 0;
+        
+    }
+    
+   
+    @for $i from 1 through 3{
+        .button-#{$i} {
+              position: absolute;
+        width: 0.35%;
+        height: 3%;
+        left: 67.8%;
+         background: $but-c;
+        border-radius: 10px;
+            @if $i ==1{
+                top:20%;
+            }
+              @if $i ==2{
+                top:26%;
+            }
+            @if $i==3{
+                top:32%;
+            }
+            
+        }
+        
+
+    }
+} //end box
+
+
+ a {
+ position: relative;
+  margin: auto;
+  display: block;
+  text-decoration: none;
+  color: $cloud;
+  font-weight: bold;
+  font-size: 1.25em;
+  padding: 1em 3em;
+  overflow: hidden;
+ @include transi(all,0.3s,ease);
+    width: 100px;
+    font-family: $ubuntu;
+  &:before {
+    content: '';
+  display: block;
+  height: 1em;
+  width: 1em;
+  border-bottom: 2px solid $cloud;
+  border-left: 2px solid $cloud;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+      @include transi(all,0.3s,ease);
+  }
+  &:after {
+    content: '';
+    display: block;
+    height: 1em;
+    width: 1em;
+    border-top: 2px solid $cloud;
+    border-right: 2px solid  $cloud;
+    position: absolute;
+    right: 0;
+    top: 0;
+   @include transi(all,0.3s,ease);
+  }
+  &:hover {
+    &:before, &:after {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}//End
+    

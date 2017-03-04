@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300|Ubuntu:500");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/* line 59, ../sass/main.scss */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 68, ../sass/main.scss */
+body {
+  background: #5ed1c9;
+}
+
+/* line 72, ../sass/main.scss */
+.open {
+  -webkit-transform: translateX(-38px);
+  transform: translateX(-38px);
+}
+
+/* line 76, ../sass/main.scss */
+.thropen {
+  -webkit-transform: translateX(38px);
+  transform: translateX(38px);
+}
+
+/* line 79, ../sass/main.scss */
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  width: 600px;
+  height: 540px;
+  background: none;
+}
+/* line 87, ../sass/main.scss */
+.box .p-body {
+  position: absolute;
+  top: 10%;
+  left: 32.5%;
+  width: 35%;
+  height: 80%;
+  background: #292f36;
+  border-radius: 40px;
+  border-width: 15px;
+  margin: 0;
+  z-index: 1;
+}
+/* line 99, ../sass/main.scss */
+.box .p-body .phone-top {
+  margin: 0 auto;
+  position: absolute;
+  left: 17%;
+  top: 2%;
+  width: 66%;
+  height: 5.5%;
+  background: none;
+}
+/* line 107, ../sass/main.scss */
+.box .p-body .phone-top .camera {
+  background: black;
+  position: absolute;
+  border-color: black;
+  top: 20%;
+  width: 10%;
+  height: 60%;
+  border-radius: 50%;
+}
+/* line 115, ../sass/main.scss */
+.box .p-body .phone-top .camera .lens {
+  position: absolute;
+  background: white;
+  top: 31%;
+  left: 31%;
+  width: 38%;
+  height: 38%;
+  border-radius: 50%;
+}
+/* line 125, ../sass/main.scss */
+.box .p-body .phone-top .speaker {
+  position: absolute;
+  background: black;
+  top: 42.5%;
+  left: 32.5%;
+  width: 35%;
+  height: 15%;
+  border-radius: 20px;
+}
+/* line 134, ../sass/main.scss */
+.box .p-body .phone-top .flash {
+  position: absolute;
+  top: 20%;
+  left: 90%;
+  width: 10%;
+  height: 60%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+}
+/* line 142, ../sass/main.scss */
+.box .p-body .phone-top .flash .inner-flash {
+  position: absolute;
+  background: white;
+  left: 31%;
+  top: 31%;
+  border-radius: 50%;
+  width: 38%;
+  height: 38%;
+}
+/* line 153, ../sass/main.scss */
+.box .p-body .inner-body {
+  position: absolute;
+  top: 10%;
+  left: 2.5%;
+  width: 95%;
+  height: 77.5%;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+/* line 162, ../sass/main.scss */
+.box .p-body .inner-body video {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  object-fit: fill;
+}
+/* line 172, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget {
+  background: url("bg.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+}
+/* line 179, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget:before {
+  content: '';
+  position: absolute;
+  width: 45%;
+  height: 27%;
+  background: transparent;
+  top: 16%;
+  left: 27%;
+  z-index: 4;
+  border-radius: 50%;
+  border: 1.5px solid #8a8d91;
+  border-left-color: #35a7ff;
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+/* line 193, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 30%;
+  background: black;
+  left: 25%;
+  top: 15%;
+  border-radius: 50%;
+  background: #3c4148;
+}
+/* line 206, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .plus-change:before {
+  content: '\f068' !important;
+}
+/* line 211, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .plus {
+  position: absolute;
+  width: 70%;
+  background: none;
+  height: 7%;
+  top: 37%;
+  left: 15%;
+  z-index: 5;
+  overflow: hidden;
+}
+/* line 220, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .plus:before {
+  cursor: pointer;
+  font: normal normal normal 6px/1 FontAwesome;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #c4c6c8;
+  content: '\f067';
+  position: absolute;
+  width: 29%;
+  height: 100%;
+  z-index: 8;
+  top: 50%;
+  left: 35.5%;
+  background: rgba(60, 65, 72, 0.9);
+  border-radius: 50%/100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* line 242, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .weather {
+  position: absolute;
+  width: 30%;
+  height: 10%;
+  top: 17%;
+  left: 35%;
+  background: none;
+  z-index: 5;
+  color: #8a8d91;
+}
+/* line 252, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .weather .icon {
+  margin-top: 3px;
+  text-align: center;
+  font-size: 15px;
+}
+/* line 257, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .weather .city {
+  text-align: left;
+  margin-top: 2px;
+  font-size: 7px;
+}
+/* line 264, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .weather .temp {
+  position: absolute;
+  top: 63.5%;
+  left: 70%;
+  width: 50%;
+  height: 23%;
+  font-size: 9px;
+  text-rendering: optimizeLegibility !important;
+}
+/* line 275, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .time {
+  position: absolute;
+  top: 25%;
+  left: 36%;
+  margin-top: 5px;
+  width: 50%;
+  height: auto;
+  z-index: 6;
+  color: white;
+  font-size: 25px;
+}
+/* line 286, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .date {
+  position: absolute;
+  top: 35%;
+  left: 39%;
+  margin-top: 5px;
+  width: 102%;
+  height: auto;
+  z-index: 6;
+  color: #8a8d91;
+  font-size: 10px;
+}
+/* line 299, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .sec-circle {
+  visibility: visible;
+  position: absolute;
+  width: 30%;
+  top: 21%;
+  left: 30%;
+  /*LEFT WAS 11%*/
+  height: 20%;
+  border-radius: 50%;
+  background: rgba(60, 65, 72, 0.5);
+  border: 1.5px solid rgba(60, 65, 72, 0.9);
+  -webkit-clip-path: circle(80% at 2% 50%);
+  clip-path: circle(80% at 2% 50%);
+  -webkit-transition: -webkit- transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit- transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+/* line 315, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .sec-circle .material-icons {
+  color: white;
+  position: absolute;
+  font-size: 12px;
+  top: 75%;
+  left: 35%;
+}
+/* line 322, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .sec-circle .low, .box .p-body .inner-body .intro-widget .sec-circle .high {
+  font-size: 9px;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 326, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .sec-circle .low:before, .box .p-body .inner-body .intro-widget .sec-circle .high:before {
+  font: normal normal normal 9px/1 FontAwesome;
+  position: absolute;
+}
+/* line 331, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .sec-circle .low {
+  width: 80%;
+  left: 10%;
+  position: absolute;
+  top: 50%;
+}
+/* line 336, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .sec-circle .low:before {
+  content: '\f0d7';
+  top: 30%;
+  left: 31%;
+}
+/* line 342, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .sec-circle .high {
+  width: 80%;
+  left: 10%;
+  position: absolute;
+  top: 25%;
+}
+/* line 343, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .sec-circle .high:before {
+  content: '\f0d8';
+  top: 17%;
+  left: 31%;
+}
+/* line 354, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .third-circle {
+  position: absolute;
+  top: 21%;
+  right: 30%;
+  /*right was 11%*/
+  width: 30%;
+  height: 20%;
+  background: rgba(60, 65, 72, 0.5);
+  border: 1.5px solid rgba(60, 65, 72, 0.9);
+  -webkit-clip-path: circle(80% at 100% 50%);
+  clip-path: circle(80% at 98% 50%);
+  border-radius: 50%;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+/* line 355, ../sass/main.scss */
+.box .p-body .inner-body .intro-widget .third-circle:before {
+  content: 'moto';
+  position: absolute;
+  top: 38%;
+  color: white;
+  left: 60%;
+  font-size: 10px;
+}
+/* line 377, ../sass/main.scss */
+.box .p-body .brand {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  font-family: "Ubuntu", sans-serif;
+  top: 88%;
+  left: 42%;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 387, ../sass/main.scss */
+.box .p-body .button {
+  position: absolute;
+  width: 12.5%;
+  height: 5.5%;
+  top: 93%;
+  left: 45%;
+  background: #040505;
+  border-radius: 2.4px;
+}
+/* line 397, ../sass/main.scss */
+.box .p-body .dot-1 {
+  position: absolute;
+  top: 98%;
+  background: black;
+  height: 1%;
+  width: 2%;
+  border-radius: 50%;
+  left: 23%;
+}
+/* line 397, ../sass/main.scss */
+.box .p-body .dot-2 {
+  position: absolute;
+  top: 98%;
+  background: black;
+  height: 1%;
+  width: 2%;
+  border-radius: 50%;
+  right: 23%;
+}
+/* line 417, ../sass/main.scss */
+.box .p-body-copy {
+  position: absolute;
+  top: 10%;
+  left: 32.25%;
+  width: 35.5%;
+  height: 80%;
+  background: #0c0d0f;
+  border-radius: 40px;
+  margin: 0;
+}
+/* line 433, ../sass/main.scss */
+.box .button-1 {
+  position: absolute;
+  width: 0.35%;
+  height: 3%;
+  left: 67.8%;
+  background: #4f545a;
+  border-radius: 10px;
+  top: 20%;
+}
+/* line 433, ../sass/main.scss */
+.box .button-2 {
+  position: absolute;
+  width: 0.35%;
+  height: 3%;
+  left: 67.8%;
+  background: #4f545a;
+  border-radius: 10px;
+  top: 26%;
+}
+/* line 433, ../sass/main.scss */
+.box .button-3 {
+  position: absolute;
+  width: 0.35%;
+  height: 3%;
+  left: 67.8%;
+  background: #4f545a;
+  border-radius: 10px;
+  top: 32%;
+}
+
+/* line 457, ../sass/main.scss */
+a {
+  position: relative;
+  margin: auto;
+  display: block;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: bold;
+  font-size: 1.25em;
+  padding: 1em 3em;
+  overflow: hidden;
+  -webkit-transition: -webkit- all 0.3s ease;
+  transition: -webkit- all 0.3s ease;
+  transition: all 0.3s ease;
+  transition: all 0.3s ease, all 0.3s ease;
+  width: 100px;
+  font-family: "Ubuntu", sans-serif;
+}
+/* line 470, ../sass/main.scss */
+a:before {
+  content: '';
+  display: block;
+  height: 1em;
+  width: 1em;
+  border-bottom: 2px solid #ecf0f1;
+  border-left: 2px solid #ecf0f1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: -webkit- all 0.3s ease;
+  transition: -webkit- all 0.3s ease;
+  transition: all 0.3s ease;
+  transition: all 0.3s ease, all 0.3s ease;
+}
+/* line 482, ../sass/main.scss */
+a:after {
+  content: '';
+  display: block;
+  height: 1em;
+  width: 1em;
+  border-top: 2px solid #ecf0f1;
+  border-right: 2px solid #ecf0f1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: -webkit- all 0.3s ease;
+  transition: -webkit- all 0.3s ease;
+  transition: all 0.3s ease;
+  transition: all 0.3s ease, all 0.3s ease;
+}
+/* line 495, ../sass/main.scss */
+a:hover:before, a:hover:after {
+  width: 100%;
+  height: 100%;
+}
